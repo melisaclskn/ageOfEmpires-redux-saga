@@ -1,4 +1,5 @@
 
+import React from 'react';
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
@@ -9,7 +10,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <div>
+     <BrowserRouter>
       <div className="App">
         <ToastContainer />
         <Header />
@@ -21,6 +23,8 @@ function App() {
         </Switch>
       </div>
     </BrowserRouter>
+    </div>
+   
   );
 }
 

@@ -1,24 +1,24 @@
 import * as types from "./actionType";
 const initialState = {
-  users: [],
+  units: [],
   user: {},
   loading: false,
 };
 
 const unitsReducers = (state = initialState, action) => {
   switch (action.type) {
-    case types.LOAD_USERS_START:
+    case types.LOAD_UNITS_START:
       return {
         ...state,
         loading: true,
       };
-    case types.LOAD_USERS_SUCCESS:
+    case types.LOAD_UNITS_SUCCESS:
       return {
         ...state,
-        users: action.payload,
+        units: action.payload,
         loading: false,
       };
-    case types.LOAD_USERS_ERROR:
+    case types.LOAD_UNITS_ERROR:
       return {
         ...state,
         error: action.payload,

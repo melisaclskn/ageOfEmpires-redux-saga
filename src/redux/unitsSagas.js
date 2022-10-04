@@ -29,7 +29,7 @@ export function* onLoadUsersStartAsync() {
 
 
 export function* onLoadUsers() {
-  yield takeLatest(types.LOAD_USERS_START, onLoadUsersStartAsync);
+  yield takeLatest(types.LOAD_UNITS_START, onLoadUsersStartAsync);
 }
 
 

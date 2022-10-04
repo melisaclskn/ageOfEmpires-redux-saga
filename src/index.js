@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
 import { Provider } from "react-redux";
-import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 
 ReactDOM.render(
   <React.StrictMode>
