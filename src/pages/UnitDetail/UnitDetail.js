@@ -24,6 +24,20 @@ function UnitDetail() {
             <th scope="col">Description</th>
             <td>{singleUnit.description}</td>
           </tr>
+
+          <tr>
+            <th scope="col">Wood Cost</th>
+            {singleUnit.cost?.Wood === undefined ? "-" : <td>{singleUnit.cost?.Wood}</td>}
+          </tr>
+          <tr>
+            <th scope="col">Food Cost</th>
+            {singleUnit.cost?.Food === undefined ? "-" : <td>{singleUnit.cost?.Food}</td>}
+          </tr>
+          <tr>
+            <th scope="col">Gold Cost</th>
+            {singleUnit.cost?.Gold === undefined ? "-" : <td>{singleUnit.cost?.Gold}</td>}
+          </tr>
+
           <tr>
             <th scope="col">Build Time</th>
             <td>{singleUnit.build_time}</td>

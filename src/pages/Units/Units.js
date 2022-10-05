@@ -40,6 +40,7 @@ const Units = () => {
       <table className="table">
         <thead className="table-head">
           <tr>
+            <th scope="col">Id</th>
             <th scope="col">Name</th>
             <th scope="col">Age</th>
             <th scope="col">Cost</th>
@@ -55,13 +56,14 @@ const Units = () => {
             return (
               <tbody key={index} className="table-body">
                 <tr>
+                  <td>{item.id}</td>
                   <td>{item.name}</td>
                   <td>{item.age}</td>
                   <td>
-                    {item.cost === null ? <td></td> : <td></td>}
-                    {item.cost?.Food === undefined ? "" : <td>Food: {item.cost?.Food}</td>}
-                    {item.cost?.Wood === undefined ? "" : <td>Wood: {item.cost?.Wood}</td>}
-                    {item.cost?.Gold === undefined ? "" : <td>Gold: {item.cost?.Gold}</td>}
+                    {item.cost === null ? "-" : ""}
+                    {item.cost?.Food === undefined ? "" : <> Food: {item.cost?.Food}  </>}
+                    {item.cost?.Wood === undefined ? "" : <> Wood: {item.cost?.Wood}  </>}
+                    {item.cost?.Gold === undefined ? "" : <> Gold: {item.cost?.Gold}  </>}
                   </td>
                   <td>
                     <Link className="detail-btn" to={`/unitDetail/${item.id}`}>
