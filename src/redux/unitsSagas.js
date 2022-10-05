@@ -18,7 +18,6 @@ import * as types from "./actionType";
 export function* onLoadUsersStartAsync() {
   try {
     const response = yield call(loadUsersApi);
-    console.log(response,"resss")
     
       yield put(loadUsersSuccess(response));
   

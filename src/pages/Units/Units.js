@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loadUsersStart } from "../../redux/actions";
 import { Link } from "react-router-dom";
-import './Units.scss'
+import "./Units.scss";
 
 const Units = () => {
   const { units, loading } = useSelector((state) => state.units);
@@ -12,9 +12,10 @@ const Units = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
+    console.log(units, "units");
     dispatch(loadUsersStart());
   }, [dispatch]);
-
+  console.log(units, "units");
   if (loading) {
     return <span className="visually-hidden">Loading...</span>;
   }
@@ -23,7 +24,9 @@ const Units = () => {
   return (
     <div className="container">
       <div className="button-groups">
-        <button className="filter-btn" onClick={() => handleClick("All")}>All</button>
+        <button className="filter-btn" onClick={() => handleClick("All")}>
+          All
+        </button>
         {allAges.map((age) => (
           <button
             onClick={() => handleClick(age)}
@@ -54,9 +57,16 @@ const Units = () => {
                 <tr>
                   <td>{item.name}</td>
                   <td>{item.age}</td>
-                  <td>cost</td>
                   <td>
-                    <Link className="detail-btn"to={`/unitDetail/${item.id}`}>detail</Link>
+                    {item.cost === null ? <td></td> : <td></td>}
+                    {item.cost?.Food === undefined ? "" : <td>Food: {item.cost?.Food}</td>}
+                    {item.cost?.Wood === undefined ? "" : <td>Wood: {item.cost?.Wood}</td>}
+                    {item.cost?.Gold === undefined ? "" : <td>Gold: {item.cost?.Gold}</td>}
+                  </td>
+                  <td>
+                    <Link className="detail-btn" to={`/unitDetail/${item.id}`}>
+                      detail
+                    </Link>
                   </td>
                 </tr>
               </tbody>
