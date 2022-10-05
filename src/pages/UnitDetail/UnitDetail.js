@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import "./UnitDetail.scss";
 function UnitDetail() {
   const { units } = useSelector((state) => state.units);
   const { id } = useParams();
@@ -9,8 +9,9 @@ function UnitDetail() {
   console.log(singleUnit, "single");
   return (
     <div className="container">
+      <h1 className="title-name">{singleUnit.name} </h1>
       <table className="table table-striped">
-        <tbody>
+        <tbody className="table-header">
           <tr>
             <th scope="col">id</th>
             <td>{singleUnit.id}</td>

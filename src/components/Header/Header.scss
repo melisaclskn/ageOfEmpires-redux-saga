@@ -1,0 +1,66 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+
+$roboto-slab: 'Roboto Slab', serif;
+$open-sans: 'Open Sans', sans-serif;
+$grey-nav-btn: #7D9D9C;
+$green-nav-btn: #3D8361;
+$green-nav-a: #E1FFB1;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+p {
+    text-align: justify;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-container {
+    margin-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    padding: 1.5em;
+    background-color: #3d8361b3;
+
+    ul {
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        list-style-type: none;
+    }
+
+    li {
+        display: inline-block;
+        background-color: 3D8361;
+        margin: 20px;
+        background-color: $green-nav-btn;
+        margin: 10px;
+        color: #fff;
+        border-radius: 1.5em;
+    }
+
+    a {
+        width: 100%;
+        height: 100%;
+        padding: 3em;
+        color: $green-nav-a;
+        letter-spacing: 10px;
+    }
+
+    a:hover {
+        color: #7D9D9C;
+    }
+
+}

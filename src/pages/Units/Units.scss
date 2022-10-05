@@ -1,0 +1,41 @@
+$green-nav-btn: #3D8361;
+$green-nav-a: #E1FFB1;
+$pink: #F96666;
+
+.filter-btn {
+    background-color: $green-nav-btn;
+    padding: 10px;
+    margin: 5px;
+    color: $green-nav-a;
+    border-radius: 10px;
+    border: none;
+}
+
+.filter-btn :focus {
+    outline: yellow;
+}
+
+.filter-btn:active,
+.filter-btn:focus {
+    outline: none;
+    background-color: $pink;
+}
+
+.detail-btn {
+    color: $pink;
+}
+
+.detail-btn:hover {
+    text-decoration: none;
+    color: $green-nav-btn;
+}
+
+.table-head {
+    color: rgba(0, 0, 0, 0.673);
+    background: rgb(61, 131, 97);
+    background: radial-gradient(circle, rgba(61, 131, 97, 1) 0%, rgba(225, 255, 177, 1) 100%);
+}
+
+.table-body:hover {
+    background-color: #dbdbdb;
+}

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loadUsersStart } from "../../redux/actions";
 import { Link } from "react-router-dom";
+import './Units.scss'
 
 const Units = () => {
   const { units, loading } = useSelector((state) => state.units);
@@ -22,33 +23,46 @@ const Units = () => {
   return (
     <div className="container">
       <div className="button-groups">
-        <button onClick={() => handleClick("All")}>All</button>
+        <button className="filter-btn" onClick={() => handleClick("All")}>All</button>
         {allAges.map((age) => (
           <button
             onClick={() => handleClick(age)}
             key={age}
-            className="btn-color-primary"
+            className="filter-btn"
           >
             {age}
           </button>
         ))}
       </div>
-      {units?.units
-        ?.filter(
-          (product) => selectedAge === "All" || product.age === selectedAge
-        )
-        .map((item, index) => {
-          return (
-            <tr key={index.id}>
-              <td>{item.name}</td>
-              <td>{item.age}</td>
-              <td> cost</td>
-              <td>
-                <Link to={`/unitDetail/${item.id}`}>detail</Link>
-              </td>
-            </tr>
-          );
-        })}
+      <table className="table">
+        <thead className="table-head">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Detail</th>
+          </tr>
+        </thead>
+
+        {units?.units
+          ?.filter(
+            (product) => selectedAge === "All" || product.age === selectedAge
+          )
+          .map((item, index) => {
+            return (
+              <tbody key={index} className="table-body">
+                <tr>
+                  <td>{item.name}</td>
+                  <td>{item.age}</td>
+                  <td>cost</td>
+                  <td>
+                    <Link className="detail-btn"to={`/unitDetail/${item.id}`}>detail</Link>
+                  </td>
+                </tr>
+              </tbody>
+            );
+          })}
+      </table>
     </div>
   );
 };
