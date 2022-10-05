@@ -12,10 +12,9 @@ const Units = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log(units, "units");
     dispatch(loadUsersStart());
   }, [dispatch]);
-  console.log(units, "units");
+  
   if (loading) {
     return <span className="visually-hidden">Loading...</span>;
   }
@@ -23,8 +22,8 @@ const Units = () => {
   const handleClick = (age) => setselectedAge(age);
   return (
     <div className="container">
-      <div className="button-groups">
-        <button className="filter-btn" onClick={() => handleClick("All")}>
+      <div className="buttons-age">
+        Filter By Age :<button className="filter-btn" onClick={() => handleClick("All")}>
           All
         </button>
         {allAges.map((age) => (

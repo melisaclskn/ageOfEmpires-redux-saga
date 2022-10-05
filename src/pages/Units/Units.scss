@@ -1,7 +1,11 @@
 $green-nav-btn: #3D8361;
 $green-nav-a: #E1FFB1;
 $pink: #F96666;
-
+.buttons-age{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 .filter-btn {
     background-color: $green-nav-btn;
     padding: 10px;

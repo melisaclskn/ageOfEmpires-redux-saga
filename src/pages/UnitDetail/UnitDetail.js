@@ -6,7 +6,7 @@ function UnitDetail() {
   const { units } = useSelector((state) => state.units);
   const { id } = useParams();
   const singleUnit = units.units.find((item) => item.id === Number(id));
-  console.log(singleUnit, "single");
+  
   return (
     <div className="container">
       <h1 className="title-name">{singleUnit.name} </h1>
