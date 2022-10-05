@@ -1,7 +1,6 @@
 import * as types from "./actionType";
 const initialState = {
   units: [],
-  user: {},
   loading: false,
 };
 
