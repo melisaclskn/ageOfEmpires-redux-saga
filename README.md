@@ -4,7 +4,6 @@
 - There are 3 pagesin the project. These are Home Page, Units Page and Unit Detail page.
 - Users can see listing units in Units Page.
 - Users can filter units by age.
-- Users can load more starships with a load more button
 - Users can click on any item's detail button and go to a detail page that includes details of a specific unit.
 
 ## Technologies
