@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { loadUsersStart } from "../../redux/actions";
+import { loadUnitsStart } from "../../redux/actions";
 import { Link } from "react-router-dom";
 import "./Units.scss";
 
@@ -12,7 +12,7 @@ const Units = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(loadUsersStart());
+    dispatch(loadUnitsStart());
   }, [dispatch]);
   
   if (loading) {

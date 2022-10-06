@@ -6,8 +6,8 @@ import {
   all
 } from "redux-saga/effects";
 import {
-  loadUsersSuccess,
-  loadUsersError
+  loadUnitsSuccess,
+  loadUnitsError
 } from "./actions";
 import {
   loadUsersApi
@@ -19,10 +19,10 @@ export function* onLoadUsersStartAsync() {
   try {
     const response = yield call(loadUsersApi);
     
-      yield put(loadUsersSuccess(response));
+      yield put(loadUnitsSuccess(response));
   
   } catch (error) {
-    yield put(loadUsersError(error));
+    yield put(loadUnitsError(error));
   }
 }
 
